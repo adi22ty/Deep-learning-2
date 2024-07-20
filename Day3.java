@@ -1,5 +1,6 @@
-public class Day3 {
-    // static void swap(int a, int b ){
+public class Day3{
+    //create a function named swap: Swap 2 values. 
+    // static void Swap(int a, int b){
     //     int x=a;
     //     a=b;
     //     b=x;
@@ -8,80 +9,60 @@ public class Day3 {
 
     // }
 
-    // static void numbers(int n){
+    // create a function to print first n natural numbers
+    // static void natural(int n){
     //     for(int i=1;i<=n;i++){
     //         System.out.println(i);
     //     }
-
-
     // }
-    // static void checkprime(int n){
-    //     for(int i=2;i<n;i++){
-    //         if(n%i==0){
-    //             System.out.println("no ");
 
+    // create a function to check if a number n is prime or not
+
+    // static void CheckPrime(int n){
+    //     for(int i=2;i<=n;i++){
+    //         if(n%i==0){
+    //             System.out.println("no");
     //         }
     //         else{
-               
-
+    //             System.out.println("yes");
     //         }
     //     }
-    //     System.out.println("yes");
+        
     // }
 
-    // static void reverse(int n){
+    // Return the inverse of a number n.n=0001549 return: 9451
+    // static void Inverse(int n){
     //     int temp=0;
     //     while(n!=0){
     //         temp=temp*10+ n%10;
     //         n=n/10;
-    //     }
-    //     reverse temp;
-
-
 
     //     }
-    // static void digits(int n){
-    //     int count =1;
-    //     while(n>=10){
-    //         int t =n%10;
-    //         n=n/10;
-    //         count++;
+    //     System.out.println(temp);
 
-
-    //     }
-    //     System.out.println(count);
     // }
-    
-    // static void armstrong(int n){
-    //     while(n>=10){
-    //     }
+
+    // Return number of digits present in a number n. n=1234 return: 4
+    static void DigitsPresent(int n){
+        int count=1;
+        while(n>=10){
+            int t=n%10;
+            n=n/10;
+            count++;
+        }
+        System.out.println(count);
         
-
-    // }
-    static void printArr(int[] arr){
-        for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]+"");
-        }
-        System.out.println();
-
     }
-   
-
-
-    public static void main(String args []){
-        // checkprime(6);
-        // numbers(15);
-        // swap(6, 04);
-        // digits(4568);
-        int [] arr = new int [10];
-        for(int i=0;i<arr.length;i++){
-            arr[i]=i+1;
-        }
-        printArr(arr);
-
-       
+        
+    
+    public static void main(String arg[]){
+        // Swap(4,6);
+        // natural(10);
+        // CheckPrime(8);
+        // Inverse(1549);
+        DigitsPresent(1234);
 
 
     }
+
 }
-
