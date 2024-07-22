@@ -1,5 +1,4 @@
 import java.util.Scanner;
-public class day1 {
     public static void main(String args[]) {
         // for(int i=1;i<=10;i++){
         //     System.out.println(i);
@@ -79,7 +78,14 @@ public class day1 {
 
 // }
 // System.out.println();
-//     }
+//
+
+
+
+
+
+
+
 
 
 
@@ -88,4 +94,3 @@ public class day1 {
     
     }
 
-}

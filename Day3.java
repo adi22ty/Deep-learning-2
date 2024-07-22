@@ -1,4 +1,5 @@
 public class Day3{
+    
     //create a function named swap: Swap 2 values. 
     // static void Swap(int a, int b){
     //     int x=a;
@@ -43,16 +44,16 @@ public class Day3{
     // }
 
     // Return number of digits present in a number n. n=1234 return: 4
-    static void DigitsPresent(int n){
-        int count=1;
-        while(n>=10){
-            int t=n%10;
-            n=n/10;
-            count++;
-        }
-        System.out.println(count);
+    // static void DigitsPresent(int n){
+    //     int count=1;
+    //     while(n>=10){
+    //         int t=n%10;
+    //         n=n/10;
+    //         count++;
+    //     }
+    //     System.out.println(count);
         
-    }
+    // }
         
     
     public static void main(String arg[]){
@@ -60,7 +61,22 @@ public class Day3{
         // natural(10);
         // CheckPrime(8);
         // Inverse(1549);
-        DigitsPresent(1234);
+        // DigitsPresent(1234);
+
+        // int [] arrsum=new int [] {1,2,3,4,5};
+        // int sum=0;
+        // for(int i=0;i<arrsum.length;i++){
+        //     sum=sum+arrsum[i];
+
+
+        // }
+        // System.out.println("Sum of all the elements of an array: " + sum);  
+
+        
+
+
+        
+
 
 
     }

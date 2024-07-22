@@ -178,7 +178,7 @@ public class Assignment {
 //         System.out.print(" ");
 //     }
 //     for(int k=1; k<=i*2-1;k++){
-//         System.err.print("1 ");
+//         System.out.print("1 ");
 //     }
 //     System.out.println();
 // }
