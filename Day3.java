@@ -54,17 +54,20 @@ public class Day3{
     //     System.out.println(count);
         
     // }
-    static void lcm (int a,int b){
-        int g=0;
-        for(int i=1;i<=a;i++){
-            if(a%i==0&&b%i==0)
-            g=i;
-        }
-        int lcm=a*b/g;
-        System.out.println("lcm of two numbers"+lcm);
+    // lcm of two numbers
+    // static void lcm (int a,int b){
+    //     int g=0;
+    //     for(int i=1;i<=a;i++){
+    //         if(a%i==0&&b%i==0)
+    //         g=i;
+    //     }
+    //     int lcm=a*b/g;
+    //     System.out.println("lcm of two numbers"+lcm);
 
 
-    }
+    // }
+   
+
         
     
     public static void main(String arg[]){
@@ -73,7 +76,7 @@ public class Day3{
         // CheckPrime(8);
         // Inverse(1549);
         // DigitsPresent(1234);
-        lcm(8,9);
+        // lcm(8,9);
         
 
         // int [] arrsum=new int [] {1,2,3,4,5};

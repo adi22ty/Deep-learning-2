@@ -134,17 +134,19 @@ public class Basicprograms {
         // }
 
         // Fibonnaci series by user input
-        int a=0,b=1,c,term;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the term");
-        term=sc.nextInt();
-        for(int i=1;i<=term;i++){
-            System.out.print(""+a);
-            c=a+b;
-            a=b;
-            b=c;
+        // int a=0,b=1,c,term;
+        // Scanner sc=new Scanner(System.in);
+        // System.out.println("enter the term");
+        // term=sc.nextInt();
+        // for(int i=1;i<=term;i++){
+        //     System.out.print(""+a);
+        //     c=a+b;
+        //     a=b;
+        //     b=c;
 
-        }
+        // }
+
+        
 
         
 
