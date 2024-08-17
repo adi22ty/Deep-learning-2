@@ -508,14 +508,7 @@ public class Assignment2 {
         // System.out.println(sumeven);
 
 
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        while(n>0){
-           int r=n%10;
-           System.out.print(r);
-           n=n/10;
-
-        }
+      
 
 
        

@@ -1,6 +1,41 @@
 import java.util.Scanner;
 public class Basicprograms {
+
+    //  public static int root(int x){
+    //     double m=Math.sqrt(x);
+    //     return(int) m;
+    //  }
+
+
+    // public double power(double x,int n){
+    //     double m=Math.pow(x,n);
+    //     return m;
+    // }
+
+    public static boolean ispalindrome(int n){
+        int r,c;
+        int s=0;
+        c=n;
+        while(n>0){
+            r=n%10;
+            s=(s*10)+r;
+            n=n/10;
+        }
+        if(c==s){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    
+   
     public static void main (String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(ispalindrome(n));
+
         // Addition of Two Numbers:
         // int num1=5;
         // int num2=4;
@@ -146,28 +181,47 @@ public class Basicprograms {
 
         // }
 
+        // sum of digits in number
+        // Scanner sc=new Scanner (System.in);
+        // int n=sc.nextInt();
+        // int r,sum=0;
+        // while(n>0){
+        //     r=n%10;
+        //     sum=sum+r;
+        //     n=n/10;
+        // }
+        // System.out.println(sum);
+
+
+        // square root of a number
+        // Scanner sc=new Scanner (System.in);
+        // System.out.println(root(x));
+        // int x=sc.nextInt();
         
 
-        
 
-        
+        // Scanner sc=new Scanner(System.in);
+        // int x=sc.nextInt();
+        // int n=sc.nextInt();
+        // System.out.println(power(x,n));
+
+        // palindrome number
+        // int n=121,r,c,s=0;
+        //  c=n;
+        //  while(n>0){
+        //     r=n%10;
+        //     s=(s*10)+r;
+        //     n=n/10;
+        //  }
+        //  if(c==s){
+        //     System.out.print("palindrome number");
+        //  }
+        //  else{
+        //     System.out.print("not palindrome number");
+        //  }
 
 
-      
-
-
-            
-       
-        
-
-
-
-
-
-
-
-
-
+     
     }
 }
         

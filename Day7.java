@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
 public class Day7 {
-    // kadanes algorithm
-    // static int maxsubarray(int arr[]){
-    //     int maxsum=Integer.MIN_VALUE;
-    //     int currentsum=0;
-    //     for(int i=0;i<arr.length;i++){
-    //         currentsum=currentsum+arr[i];
-    //         maxsum=Integer.max(maxsum,currentsum);
-    //         if(currentsum<0){
-    //             currentsum=0;
-    //         }
+    // kadane's algorithm
+    static int maxsubarray(int arr[]){
+        int maxsum=Integer.MIN_VALUE;
+        int currentsum=0;
+        for(int i=0;i<arr.length;i++){
+            currentsum=currentsum+arr[i];
+            maxsum=Math.max(maxsum,currentsum);
+            if(currentsum<0){
+                currentsum=0;
+            }
 
-    //     }
-    //     return maxsum;
+        }
+        return maxsum;
        
-    // }
+    }
 
     // rotate array
     // public static void rotate(int nums[],int k){
@@ -78,7 +78,7 @@ public class Day7 {
    
     // // }
     
-    // another method to rotate the array
+    // Another method to rotate the array
 
     // public static void rotatearray(int nums[],int k){
     //     // int n=nums.length;
@@ -102,64 +102,10 @@ public class Day7 {
     //     System.out.println();
     // }
 
-    // public static int repeatedsubarray(int arr1[],int arr2[]){
-    //     int n1=arr1.length;
-    //     int n2=arr2.length;
-    //     int[][] dp = new int[n1 + 1][n2 + 1];
-    //     int maxlength=0;
-    //     for (int i = 1; i <= n1; i++) {
-    //         for (int j = 1; j <= n2; j++) {
-    //             if (arr1[i - 1] == arr2[j - 1]) {
-    //                 dp[i][j] = dp[i - 1][j - 1] + 1;
-    //                 maxlength = Math.max(maxlength, dp[i][j]);
-    //             }
-    //         }
-    //     }
-        
-    //     return maxlength;
-
-
-
-
-    // }
-
-    public static int countsubarray(int arr[],int k){
-        if (k <= 1) return 0;
-        
-        int product = 1, result = 0, left = 0;
-        
-        for (int right = 0; right < arr.length; right++) {
-            product *= arr[right];
-            
-            while (product >= k) {
-                product /= arr[left++];
-            }
-            
-            result += (right - left + 1);
-        }
-        
-        return result;
-    
-
-    }
-
-    
-
-    
-            
-        
-        
-
-   
-
     
     
-
-        
-
-
-
-    
+ 
+ 
     public static void main(String[] args) {
         // int nums[]={1,2,3,4,5,6,7};
         // Scanner sc=new Scanner(System.in);
@@ -171,8 +117,8 @@ public class Day7 {
 
 
 
-        // int arr[]={-2,1,-3,4,-1,2,1,-5,4};
-        // System.out.println(maxsubarray(arr));
+        int arr[]={-2,1,-3,4,-1,2,1,-5,4};
+        System.out.println(maxsubarray(arr));
 
         // int nums[]={1,2,3,4,5,6,7};
         // Scanner sc=new Scanner(System.in);
@@ -195,39 +141,10 @@ public class Day7 {
         // for(int i:num) System.out.print(i+" ");
         // System.out.println();
 
-        // Scanner sc=new Scanner(System.in);
-        // int n1=sc.nextInt();
-        // int [] arr1=new int[n1];
-        // for(int i=0;i<n1;i++){
-        //     arr1[i]=sc.nextInt();
-        // }
-        // int n2=sc.nextInt();
-        // int [] arr2=new int[n2];
-        // for(int i=0;i<n2;i++){
-        //     arr2[i]=sc.nextInt();
-        // }
-        // int result=repeatedsubarray(arr1,arr2);
-        // System.out.println("result");
-
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int k=sc.nextInt();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        int result=countsubarray(arr,k);
-        System.out.println(result);
-
-      
-
-
-
-
         
 
 
-
+    
 
     }
        

@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 public class PracticeArray {
     // Arraysbinary
     // static int  arraysbinary(int []arr,int target){
@@ -18,6 +21,7 @@ public class PracticeArray {
     //         }
     //     }
     //     return-1;
+    // }
             
      
 
@@ -38,51 +42,180 @@ public class PracticeArray {
     //     }
     // }
     
+    // LEETCODE-702
+    // static int binarysearch(int []nums,int target){
+    //     int low=0;
+    //     int high=nums.length-1;
+    //     while(low<=high){
+    //         int mid=high-(high-low)/2;
+    //         if(nums[mid]==target){
+        
+    //             return mid;
+    //         }
+    //         else if(nums[mid]<target){
+    //             low=mid+1;
+    //         }
+    //         else{
+    //             high=mid-1;
+    //         }
+    //     }
+    //     return -1;
+
+    // }
+
+    // public static int peakarray(int arr[]){
+    //     int low=0;
+    //     int high=arr.length-1;
+    //     int mid=high-(high-low)/2;
+    //     while(low<high){
+    //         if(arr[mid]<arr[mid+1]){
+    //             low=mid+1;
+    //         }
+    //         else{
+    //             high=mid;
+    //         }
+    //         mid=high-(high-low)/2;
+    //     }
+    //     return low;
+    // }
+
+    // public static List<Integer> targetindices (int nums[],int target){
+    //     Arrays.sort(nums);
+    //      List<Integer> result = new ArrayList<>();
+    //      for(int i=0;i<nums.length;i++){
+    //         if(nums[i]==target){
+    //             result.add(i);
+    //         }
+    //      }
+    //      return result;
+
+    // }
+
+    // public static int peak(int arr[]){
+    //     for(int i=1;i<arr.length-1;i++){
+    //         if(arr[i]>arr[i-1]&&arr[i]>arr[i+1]){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
+
+    // public static int longestsubarray(int []nums){
+    //     int left = 0;
+    //     int zeroCount = 0;
+    //     int maxLength = 0;
+
+    //     for (int right = 0; right < nums.length; right++) {
+    //         if (nums[right] == 0) {
+    //             zeroCount++;
+    //         }
+    //         while (zeroCount > 1) {
+    //             if (nums[left] == 0) {
+    //                 zeroCount--;
+    //             }
+    //             left++;
+    //         }
+    //         maxLength = Math.max(maxLength, right - left+1);
+            
+        
+    // }
+//     return maxLength -1;
+
+// }
+// first and last position of element in array
+public static int[] searchRange(int[] nums, int target) {
+    int[] result = new int[2];
+        result[0] = firstocc(nums, target);
+        result[1] = lastocc(nums, target);
+        return result;
+    }
+
+
+
+public static int firstocc(int nums[],int target){
+    int low=0;
+    int high=nums.length-1;
+    int ans=-1;
+    while(low<=high){
+        int mid=(low+high)/2;
+        if(nums[mid]==target){
+           ans= mid;
+           high=mid-1;
+        }
+        else if(target>nums[mid]){
+            low=mid+1;
+        }
+        else{
+            high=mid-1;
+        }
+       
+    }
+    return ans;
+}
+public static int lastocc(int []nums,int target){
+
+int low=0;
+    int high=nums.length-1;
+    int ans=-1;
+    while(low<=high){
+        int mid=(low+high)/2;
+        if(nums[mid]==target){
+           ans= mid;
+           low=mid+1;
+        }
+        else if(nums[mid]<target){
+            low=mid+1;
+        }
+        else{
+            high=mid-1;
+        }
+       
+    }
+    return ans;
+}
+
 
 
 
     public static void main(String arg[]){
-        Scanner sc=new Scanner(System.in);
-        // Scanner sc=new Scanner(System.in);
-        // int arr[]=new int [n];
-        // for(int i=0;i<n;i++){
+        int[] nums = {5, 7, 7, 8, 8, 10};
+        int target = 8;
+        int[] result = searchRange(nums, target);
+        System.out.println(result[0]);
+        System.out.println(result[1]);
 
-        // }
 
-        int arr[]=new int [5];
-        arr[0]=10;
-        arr[1]=20;
-        arr[2]=30;
-        arr[3]=40;
-        arr[4]=50;
-        for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
-            
-           
-        }
+
+
+
+        // int []nums={1, 1, 0, 1};
+        // System.out.println(longestsubarray(nums));
+
+        // int []arr={0,1,0};
+        // System.out.println(peak(arr));
+
+
+        // int nums[]={1,2,5,2,3};
+        // int target=2;
+        // System.out.println(targetindices(nums,target));
+
+
+
+
+        // int [] nums={-1,0,3,5,9,12};
+        // int target=9;
+        // System.out.println(binarysearch(nums,target));
+
+
+        // int [] arr={0,1,0};
+        // System.out.println(peakarray(arr));
+      
         
+     
        
-    
-        
-       
-        
       
 
-
-
-
-
         
-        
-
-
-
-
-
-
-
-
-
 
         // int  [] a ={3,5,6,9,78};
         // int target=6;
