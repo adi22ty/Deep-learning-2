@@ -12,29 +12,29 @@ public class Basicprograms {
     //     return m;
     // }
 
-    public static boolean ispalindrome(int n){
-        int r,c;
-        int s=0;
-        c=n;
-        while(n>0){
-            r=n%10;
-            s=(s*10)+r;
-            n=n/10;
-        }
-        if(c==s){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    // public static boolean ispalindrome(int n){
+    //     int r,c;
+    //     int s=0;
+    //     c=n;
+    //     while(n>0){
+    //         r=n%10;
+    //         s=(s*10)+r;
+    //         n=n/10;
+    //     }
+    //     if(c==s){
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
 
     
    
     public static void main (String args[]){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        System.out.print(ispalindrome(n));
+        // Scanner sc=new Scanner(System.in);
+        // int n=sc.nextInt();
+        // System.out.print(ispalindrome(n));
 
         // Addition of Two Numbers:
         // int num1=5;
@@ -219,6 +219,20 @@ public class Basicprograms {
         //  else{
         //     System.out.print("not palindrome number");
         //  }
+
+        // Swapping of two numbers without using third variable
+        // int a=4;
+        // int b=3;
+        // a=a-b;
+        // b=a+b;
+        // a=b-a;
+
+        // using bitwise operator 
+        // a=a^b;
+        // b=a^b;
+        // a=a^b;
+        // System.out.println("the value of a after swapping"+a);
+        // System.out.println("the value of b after swapping"+b);
 
 
      

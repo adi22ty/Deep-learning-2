@@ -73,10 +73,10 @@ public class Day5 {
     //         }
     //     }
     // }
-    // static void display(int [] arr){
-    //     for(int i:arr) System.out.print(i+" ");
-    //     System.out.println();
-    // }
+    static void display(int [] arr){
+        for(int i:arr) System.out.print(i+" ");
+        System.out.println();
+    }
         
 
 

@@ -123,66 +123,151 @@ public class PracticeArray {
 
 // }
 // first and last position of element in array
-public static int[] searchRange(int[] nums, int target) {
-    int[] result = new int[2];
-        result[0] = firstocc(nums, target);
-        result[1] = lastocc(nums, target);
-        return result;
-    }
+// public static int[] searchRange(int[] nums, int target) {
+//     int[] result = new int[2];
+//         result[0] = firstocc(nums, target);
+//         result[1] = lastocc(nums, target);
+//         return result;
+//     }
 
 
 
-public static int firstocc(int nums[],int target){
-    int low=0;
-    int high=nums.length-1;
-    int ans=-1;
-    while(low<=high){
-        int mid=(low+high)/2;
-        if(nums[mid]==target){
-           ans= mid;
-           high=mid-1;
-        }
-        else if(target>nums[mid]){
-            low=mid+1;
-        }
-        else{
-            high=mid-1;
-        }
+// public static int firstocc(int nums[],int target){
+//     int low=0;
+//     int high=nums.length-1;
+//     int ans=-1;
+//     while(low<=high){
+//         int mid=(low+high)/2;
+//         if(nums[mid]==target){
+//            ans= mid;
+//            high=mid-1;
+//         }
+//         else if(target>nums[mid]){
+//             low=mid+1;
+//         }
+//         else{
+//             high=mid-1;
+//         }
        
-    }
-    return ans;
-}
-public static int lastocc(int []nums,int target){
+//     }
+//     return ans;
+// }
+// public static int lastocc(int []nums,int target){
 
-int low=0;
-    int high=nums.length-1;
-    int ans=-1;
-    while(low<=high){
-        int mid=(low+high)/2;
-        if(nums[mid]==target){
-           ans= mid;
-           low=mid+1;
-        }
-        else if(nums[mid]<target){
-            low=mid+1;
-        }
-        else{
-            high=mid-1;
-        }
+// int low=0;
+//     int high=nums.length-1;
+//     int ans=-1;
+//     while(low<=high){
+//         int mid=(low+high)/2;
+//         if(nums[mid]==target){
+//            ans= mid;
+//            low=mid+1;
+//         }
+//         else if(nums[mid]<target){
+//             low=mid+1;
+//         }
+//         else{
+//             high=mid-1;
+//         }
        
+//     }
+//     return ans;
+// }
+
+// public static boolean searchmatrix(int [][] matrix,int target){
+//     int m=matrix.length;
+//     int n=matrix[0].length;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             if(matrix[i][j]==target){
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+
+// }
+
+// public static int peakarray(int nums[]){
+//     int low=0;
+//     int high=nums.length-1;
+//     while(low<=high){
+//         int mid=high-(high-low)/2;
+//         if(nums[mid]<nums[mid+1]){
+//             low=mid+1;
+//         }
+//         else{
+//             high=mid-1;
+//         }
+//     }
+//     return low;
+
+// }
+
+// public static int targetindices(int []nums,int target){
+//     Arrays.sort(nums);
+//     int low=0;
+//     int high=nums.length-1;
+//     while(low<=high){
+//         int mid=high-(high-low)/2;
+//         if(nums[mid]==target){
+//             return mid;
+
+//         }
+//         else if(nums[mid]<target){
+//             low=mid+1;
+//         }
+//         else{
+//             high=mid-1;
+//         }
+//     }
+//     return -1;
+// }
+
+// public static int peakarray2(int nums[]){
+//     int low=0;
+//     int high=nums.length-1;
+//     while(low<high){
+//         int mid=high-(high-low)/2;
+//         if(nums[mid]<nums[mid+1]){
+//             low=mid+1;
+//         }
+//         else{
+//            high=mid;
+//         }
+
+//     }
+//     return low;
+// }
+
+// public static boolean searchmatrix(int[][] matrix,int target){
+//     for(int i=0;i<matrix.length;i++){
+//         for(int j=0;j<matrix[0].length;j++){
+//             if(matrix[i][j]==target){
+//                 return true;
+//             }
+            
+//         }
+//     }
+//     return false;
+// }
+public static int reverse(int num[]){
+    int rev=0;
+    for(int i=num.length-1;i<0;i++){
+        rev=rev+num[i];
     }
-    return ans;
+    return rev;
 }
 
 
 
 
     public static void main(String arg[]){
-        int[] nums = {5, 7, 7, 8, 8, 10};
-        int target = 8;
-        int[] result = searchRange(nums, target);
-        System.out.println(result[0]);
-        System.out.println(result[1]);
+        // int[] nums = {5, 7, 7, 8, 8, 10};
+        // int target = 8;
+        // int[] result = searchRange(nums, target);
+        // System.out.println(result[0]);
+        // System.out.println(result[1]);
 
 
 
@@ -299,6 +384,36 @@ int low=0;
         //     System.out.println(marks[i]);
 
         // }
+        // int nums[][]={{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+        // int target=3;
+        // int nums[][]={{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
+        // int target=5;
+        // System.out.println(searchmatrix(nums,target));
+
+        // int nums[]={0,1,0};
+        // System.out.println(peakarray(nums));
+
+        // int nums[]={1,2,5,2,3};
+        // int target=3;
+        // System.out.println(targetindices(nums, target));
+
+        // int nums[]={1,2,3,1};
+        // System.out.println(peakarray2(nums));
+
+        // int [][] nums={{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+        // int target=2;
+        // System.out.println(searchmatrix(nums, target));
+
+        int num[]={1,2,3,4,5};
+        System.out.println(reverse(num));
+
+
+        
+
+   
+
+        
+       
 
 
       
