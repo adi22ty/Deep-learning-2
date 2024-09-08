@@ -251,14 +251,6 @@ public class PracticeArray {
 //     }
 //     return false;
 // }
-public static int reverse(int num[]){
-    int rev=0;
-    for(int i=num.length-1;i<0;i++){
-        rev=rev+num[i];
-    }
-    return rev;
-}
-
 
 
 
@@ -404,8 +396,28 @@ public static int reverse(int num[]){
         // int target=2;
         // System.out.println(searchmatrix(nums, target));
 
-        int num[]={1,2,3,4,5};
-        System.out.println(reverse(num));
+
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int [][] arr=new int [n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+    
+        System.out.println();
+       
+
+
+    }
+
+       
 
 
         

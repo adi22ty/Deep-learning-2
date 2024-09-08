@@ -23,9 +23,11 @@ public class Day3{
     //     for(int i=2;i<=n;i++){
     //         if(n%i==0){
     //             System.out.println("no");
+    //             break;
     //         }
     //         else{
     //             System.out.println("yes");
+    //             break;
     //         }
     //     }
         
@@ -73,7 +75,7 @@ public class Day3{
     public static void main(String arg[]){
         // Swap(4,6);
         // natural(10);
-        // CheckPrime(8);
+        // CheckPrime(2);
         // Inverse(1549);
         // DigitsPresent(1234);
         // lcm(8,9);
