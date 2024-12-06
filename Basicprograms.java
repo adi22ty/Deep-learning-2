@@ -206,19 +206,19 @@ public class Basicprograms {
         // System.out.println(power(x,n));
 
         // palindrome number
-        // int n=121,r,c,s=0;
-        //  c=n;
-        //  while(n>0){
-        //     r=n%10;
-        //     s=(s*10)+r;
-        //     n=n/10;
-        //  }
-        //  if(c==s){
-        //     System.out.print("palindrome number");
-        //  }
-        //  else{
-        //     System.out.print("not palindrome number");
-        //  }
+        int n=121,r,c,s=0;
+         c=n;
+         while(n>0){
+            r=n%10;
+            s=(s*10)+r;
+            n=n/10;
+         }
+         if(c==s){
+            System.out.print("palindrome number");
+         }
+         else{
+            System.out.print("not palindrome number");
+         }
 
         // Swapping of two numbers without using third variable
         // int a=4;
